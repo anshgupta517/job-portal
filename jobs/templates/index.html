@@ -1,22 +1,165 @@
-{% extends 'basic.html' %}
+{% extends 'base.html' %}
 
-{% block title %} Job Portal {% endblock %}
-{% block home %} active {% endblock %}
-{% block css %}
+{% block title %}Welcome to Job Portal - Find Your Dream Job{% endblock %}
+
+{% block extra_css %}
+<style>
+    .hero-section {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://source.unsplash.com/random/1600x900/?office');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 100px 0;
+        margin-bottom: 50px;
+        border-radius: 10px;
+    }
+    
+    .feature-card {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+        height: 100%;
+    }
+    
+    .feature-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .stats-section {
+        background-color: #f8f9fa;
+        padding: 50px 0;
+        margin: 50px 0;
+        border-radius: 10px;
+    }
+    
+    .stat-item {
+        text-align: center;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #0d6efd;
+        margin-bottom: 10px;
+    }
+</style>
 {% endblock %}
-{% block body %}
-{% load static %}   
-<div class="container-fluid mt-2">
-    <img src="{% static 'Recruitment Vector.png' %}" alt="" width="100%" height="450px">
+
+{% block content %}
+<!-- Hero Section -->
+<div class="hero-section text-center">
+    <div class="container">
+        <h1 class="display-4 mb-4">Find Your Dream Job Today</h1>
+        <p class="lead mb-5">Connect with thousands of employers and find the perfect role for your career journey.</p>
+        <div class="d-flex justify-content-center gap-3">
+            <a href="{% url 'jobs:signup' %}" class="btn btn-primary btn-lg">Sign Up as Job Seeker</a>
+            <a href="{% url 'jobs:company_signup' %}" class="btn btn-outline-light btn-lg">Register as Employer</a>
+        </div>
+    </div>
 </div>
-    <div class="container-fluid mt-2" style="background-color: #4f868c; width: 100%;">
-        <div class="row">
-            <div class="col-md-4">
-                <h3 style="color: aliceblue;">Contact Us</h3>
-                <p style="color: aliceblue">Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jobportal@gmail.com</p>
-                <p style="color: aliceblue">Mobile No.:&nbsp;&nbsp;9745632121</p>
+
+<!-- Features Section -->
+<div class="container">
+    <div class="row mb-5">
+        <div class="col-md-6 mb-4">
+            <div class="card feature-card">
+                <div class="card-body p-4">
+                    <h3 class="card-title mb-3">For Job Seekers</h3>
+                    <p class="card-text">Discover opportunities tailored to your skills and career goals.</p>
+                    <ul class="list-group list-group-flush mb-3">
+                        <li class="list-group-item bg-transparent">Access to thousands of job listings</li>
+                        <li class="list-group-item bg-transparent">Easy application process</li>
+                        <li class="list-group-item bg-transparent">Career guidance and resources</li>
+                        <li class="list-group-item bg-transparent">Job alerts and notifications</li>
+                    </ul>
+                    <a href="{% url 'jobs:signup' %}" class="btn btn-primary">Create Job Seeker Account</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card feature-card">
+                <div class="card-body p-4">
+                    <h3 class="card-title mb-3">For Employers</h3>
+                    <p class="card-text">Find qualified candidates to join your team and grow your business.</p>
+                    <ul class="list-group list-group-flush mb-3">
+                        <li class="list-group-item bg-transparent">Post unlimited job openings</li>
+                        <li class="list-group-item bg-transparent">Browse through applicant profiles</li>
+                        <li class="list-group-item bg-transparent">Manage applications efficiently</li>
+                        <li class="list-group-item bg-transparent">Connect with top talent</li>
+                    </ul>
+                    <a href="{% url 'jobs:company_signup' %}" class="btn btn-primary">Create Employer Account</a>
+                </div>
             </div>
         </div>
     </div>
-    
+
+    <!-- Stats Section -->
+    <div class="stats-section">
+        <div class="container">
+            <h2 class="text-center mb-5">Why Choose Job Portal</h2>
+            <div class="row">
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="stat-item">
+                        <div class="stat-number">1500+</div>
+                        <div class="stat-text">Active Jobs</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="stat-item">
+                        <div class="stat-number">850+</div>
+                        <div class="stat-text">Companies</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="stat-item">
+                        <div class="stat-number">25K+</div>
+                        <div class="stat-text">Job Seekers</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="stat-item">
+                        <div class="stat-number">10K+</div>
+                        <div class="stat-text">Successful Hires</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- How It Works Section -->
+    <div class="row mb-5">
+        <div class="col-12 text-center mb-4">
+            <h2>How It Works</h2>
+            <p class="lead">Simple steps to find your perfect job match</p>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card feature-card text-center h-100">
+                <div class="card-body p-4">
+                    <div class="display-1 text-primary mb-3">1</div>
+                    <h4 class="card-title">Create Your Account</h4>
+                    <p class="card-text">Sign up as a job seeker or employer and complete your profile.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card feature-card text-center h-100">
+                <div class="card-body p-4">
+                    <div class="display-1 text-primary mb-3">2</div>
+                    <h4 class="card-title">Browse Opportunities</h4>
+                    <p class="card-text">Search for jobs that match your skills and experience.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card feature-card text-center h-100">
+                <div class="card-body p-4">
+                    <div class="display-1 text-primary mb-3">3</div>
+                    <h4 class="card-title">Apply & Connect</h4>
+                    <p class="card-text">Submit your application and connect with employers.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
