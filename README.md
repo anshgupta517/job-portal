@@ -1,5 +1,5 @@
 
-# Job Portal
+# Job Portal - Django
 
 ## Overview
 
