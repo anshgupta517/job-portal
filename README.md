@@ -11,17 +11,13 @@ This project, written primarily in HTML, aims to provide a platform for job seek
 *   **Potential Django Integration:** The presence of `manage.py` and a `JobPortal` directory hints at the possible use of the Django framework for backend functionality.
 *   **Job Listings:** The `jobs` directory suggests a system for managing and displaying job postings.
 
-## Prerequisites
-
-```bash
-    pip install django
-    ```
 
 ## Installation
 
-1.  **Clone the repository:**
+1.  **Install Django and Clone the repository:**
 
     ```bash
+    pip install django
     git clone https://github.com/anshgupta517/job-portal.git
     cd job-portal
     ```
