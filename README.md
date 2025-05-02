@@ -13,8 +13,7 @@ This project, written primarily in HTML, aims to provide a platform for job seek
 
 ## Prerequisites
 
-
-    ```bash
+```bash
     pip install django
     ```
 
