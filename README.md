@@ -7,9 +7,12 @@ This project, written primarily in HTML, aims to provide a platform for job seek
 
 ## Features
 
-*   **Basic HTML Structure:** The project utilizes HTML as its primary language, indicating a focus on web page structure and content.
-*   **Potential Django Integration:** The presence of `manage.py` and a `JobPortal` directory hints at the possible use of the Django framework for backend functionality.
 *   **Job Listings:** The `jobs` directory suggests a system for managing and displaying job postings.
+*   Implemented user authentication and role-based access control for Applicants, Companies, and Administrators.
+*   Enabled companies to post, edit, and manage job listings, including details like salary, experience, and location.
+*   Allowed applicants to create profiles, browse available jobs, view job details, and apply with resume uploads.
+*   Built an administrative backend for user management and company verification (accept/reject registrations).
+*   Utilized Django's ORM for database interactions and managed user data, job postings, and applications effectively.
 
 
 ## Installation
