@@ -7,7 +7,7 @@ This project, written primarily in HTML, aims to provide a platform for job seek
 
 ## Features
 
-*   **Job Listings:** The `jobs` directory suggests a system for managing and displaying job postings.
+
 *   Implemented user authentication and role-based access control for Applicants, Companies, and Administrators.
 *   Enabled companies to post, edit, and manage job listings, including details like salary, experience, and location.
 *   Allowed applicants to create profiles, browse available jobs, view job details, and apply with resume uploads.
